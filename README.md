@@ -30,7 +30,17 @@ python -m twine upload dist/*
 ----
 
 
-## [Does Gurobi Support GPUs?](https://support.gurobi.com/hc/en-us/articles/360012237852-Does-Gurobi-support-GPUs?utm_source=chatgpt.com)
+# Solving MILPs on GPUs
+
+There are obvious intuitive ways to leverage parallelization in LP solving, but the specific algorithms that do so are not part of the typical convex optimization curriculum. Gurobi, a longtime leader in the mathematical programming solver space, stated as recently as 2023 "up to this point, all of the evidence indicates that they aren't well suited to the needs of an LP/MIP/QP solver".
+
+Cuopt is interesting because it's free to use and appears to be, like Cuda, a sales funnel for Nvidia hardware. It's super easy to spin up Nvidia-attached containers (using e.g. Modal.com) so let's test it out!
+
+
+----
+
+
+### [Does Gurobi Support GPUs?](https://support.gurobi.com/hc/en-us/articles/360012237852-Does-Gurobi-support-GPUs?utm_source=chatgpt.com)
 >
 > The answer to the question "Does Gurobi support GPUs" is: Yes, we have the ability to benchmark Gurobi users' optimization models on NVIDIA GPU hardware, and users can download and try our GPU-enabled PDHG implementation.
 >
