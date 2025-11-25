@@ -1,7 +1,34 @@
+# cuOpt Stub Generation
+
+This repository contains a script to auto-generate stubs for Nvidia's cuOpt Python interface. It generates those by installing cuOpt on a container on Modal.com, using MyPy's `stubgen` utility, and serializing the stubs as a tarball to the development machine.
+
+The stubs are on PyPi! https://pypi.org/project/cuopt-stubs/0.2.0/
+
+
+Install the stubs with `uv add cuopt-stubs` or `pip install cuopt-stubs`.
+
+Installing these stubs
+
+## Rebuilding stubs
+
+```sh
+# Bump the version number in stubs/pyproject.toml
+python -m modal run src.generate_stubs
+cd stubs/
+rm -rf dist/ build/ *.egg-info
+python -m build
+# Upload to PyPI
+python -m twine upload dist/*
+```
+
 # Run MILPs on GPU with cuOpt
 
 - [Install cuOpt](https://docs.nvidia.com/cuopt/user-guide/latest/cuopt-python/quick-start.html)
 - [cuOpt base images](https://hub.docker.com/r/nvidia/cuopt/tags)
+
+
+----
+
 
 ## [Does Gurobi Support GPUs?](https://support.gurobi.com/hc/en-us/articles/360012237852-Does-Gurobi-support-GPUs?utm_source=chatgpt.com)
 >
