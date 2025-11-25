@@ -1,3 +1,8 @@
+# Run MILPs on GPU with cuOpt
+
+- [Install cuOpt](https://docs.nvidia.com/cuopt/user-guide/latest/cuopt-python/quick-start.html)
+- [cuOpt base images](https://hub.docker.com/r/nvidia/cuopt/tags)
+
 ## [Does Gurobi Support GPUs?](https://support.gurobi.com/hc/en-us/articles/360012237852-Does-Gurobi-support-GPUs?utm_source=chatgpt.com)
 >
 > The answer to the question "Does Gurobi support GPUs" is: Yes, we have the ability to benchmark Gurobi users' optimization models on NVIDIA GPU hardware, and users can download and try our GPU-enabled PDHG implementation.
