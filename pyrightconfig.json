@@ -1,0 +1,5 @@
+{
+  "stubPath": "stubs",
+  "include": ["src"],
+  "typeCheckingMode": "basic"
+}

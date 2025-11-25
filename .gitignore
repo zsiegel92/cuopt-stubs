@@ -10,3 +10,6 @@ wheels/
 .venv
 .env
 scratch/
+
+# Generated stubs
+# stubs/
